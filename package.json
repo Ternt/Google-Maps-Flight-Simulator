@@ -1,0 +1,29 @@
+{
+	"name": "google-maps-flight-simulator",
+	"description": "A flight simulator, like Microsoft Flight Simulator, but web-based, using Google's photorealistic map tiling API.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Thinh T. Pham",
+	"license": "UNLICENSED",
+	"private": true,
+	"packageManager": "yarn@4.4.1",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ternt/Google-Maps-Flight-Simulator.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Ternt/Google-Maps-Flight-Simulator/issues"
+	},
+	"workspaces": [
+		"fsm_backend",
+		"fsm_frontend"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"engines": {
+		"npm": "please-use-yarn",
+		"node": ">=20.12.2",
+		"yarn": ">=1.22.0"
+	}
+}
