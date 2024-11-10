@@ -20,6 +20,10 @@ module.exports =  {
 					options: {
 						presets: ['@babel/preset-env']
 					}
+				}, 
+				test: /\.glsl/, 
+				use: {
+					loader: 'webpack-glsl-loader'
 				}
 			}
 		],

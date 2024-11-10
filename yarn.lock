@@ -2895,6 +2895,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs@npm:0.0.2":
+  version: 0.0.2
+  resolution: "fs@npm:0.0.2"
+  checksum: 10c0/fbb0fa32e012d7d0685838e97ec1f66167bc89bd467aaf8adfa2be176c0afffd4bb9afb21bb80c79ec2a3c3e9d3e500b8292bffe1e9f1e2356e56dbd38ae0874
+  languageName: node
+  linkType: hard
+
 "fsevents@npm:~2.3.2":
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
@@ -2934,6 +2941,7 @@ __metadata:
     webpack: "npm:^5.96.1"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^5.1.0"
+    webpack-glsl-loader: "npm:^1.0.1"
   languageName: unknown
   linkType: soft
 
@@ -4198,6 +4206,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path@npm:^0.11.14":
+  version: 0.11.14
+  resolution: "path@npm:0.11.14"
+  checksum: 10c0/b686e41457d1a862790bb6eca3e1997235561a168148a7d7f6405da0e84004f4916d6d3927ba4a19e59b9b93ae32878e0e125382d67523b62c96576a4c99d1cd
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^1.0.0, picocolors@npm:^1.1.0":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
@@ -5350,6 +5365,16 @@ __metadata:
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
   checksum: 10c0/303c72b743d649dec706aedaeea2f0e924e3fb4432aa5a1e43f807e7c6052817027ccf33f88adb566fa7ebf89f6aed551ce2c2d76b5ccaaaefade83fde7f7a38
+  languageName: node
+  linkType: hard
+
+"webpack-glsl-loader@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "webpack-glsl-loader@npm:1.0.1"
+  dependencies:
+    fs: "npm:0.0.2"
+    path: "npm:^0.11.14"
+  checksum: 10c0/4f9aeafbfa9479b825ef232b586d7b5e43d3e2a9573e12ae77757804521351b968fc1e3388daa12b8fe6a01cc9c4213e7955401c990ed3b8338a837abc3580a7
   languageName: node
   linkType: hard
 
