@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports =  {
 	mode: 'development',
-	entry: './index.js',
+	entry: './src/index.js',
 	output: {
 		filename: 'main.js',
 		path: __dirname + '/dist',
@@ -27,7 +27,7 @@ module.exports =  {
 	plugins: [new HTMLWebpackPlugin({
 		title: "Google Maps Flight Simulator",
 		filename: "index.html",
-		template: "./index.html"
+		template: "./src/index.html"
 	})]
 };
 
