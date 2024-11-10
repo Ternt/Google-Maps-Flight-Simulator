@@ -1,11 +1,12 @@
 
+
 export function createContext(canvas, opt_attribs) {
-    let specs = ['webgl', 'experimental-webgl'];
+    let types = ['webgl', 'experimental-webgl'];
     let webgl = null;
-    for (const contextId in specs) {
+    for (let i = 0; i < 2; i++) {
         try {
-            webgl = canvas.getContext(contextId);
-            console.log(webgl);
+            const contextType = types[i];
+            webgl = canvas.getContext(contextType);
         } catch (e) {}
         if (webgl) {
             break;

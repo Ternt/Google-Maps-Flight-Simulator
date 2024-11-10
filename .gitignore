@@ -1,8 +1,16 @@
-/.idea
-/node_modules
+# build ignores
+**/dist
 
-# yarn
+# IDE ignores
+/.idea
+
+# node ignores
+/**/node_modules
+
+# yarn ignores
 .yarn/*
+
+# yarn includes
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins

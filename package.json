@@ -19,11 +19,14 @@
 		"fsm_frontend"
 	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"dev": "concurrently \"yarn workspace fsm_backend watch:server\" \"yarn workspace fsm_frontend watch:build\""
 	},
 	"engines": {
 		"npm": "please-use-yarn",
 		"node": ">=20.12.2",
 		"yarn": ">=1.22.0"
+	},
+	"devDependencies": {
+		"concurrently": "^9.1.0"
 	}
 }

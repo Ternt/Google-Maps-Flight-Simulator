@@ -1,40 +1,34 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'main.js',
-  },
-  target: 'web',
-  devServer: {
-    port: '5000',
-    static: {
-      directory: path.join(__dirname, 'dist')
+module.exports =  {
+	mode: 'development',
+	entry: './index.js',
+	output: {
+		filename: 'main.js',
+		path: __dirname + '/dist',
+		publicPath: '/dist'
 	},
-    open: true,
-    hot: true,
-    liveReload: true,
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/, 
-        exclude: /node_modules/, 
-        use: 'babel-loader', 
-      },
-    ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'dist', 'index.html')
-    })
-  ]
+	devtool: 'eval-source-map',
+	module: {
+		rules: [
+			{ 
+				test: /\.js$/, 
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
+			}
+		],
+	},
+	plugins: [new HTMLWebpackPlugin({
+		title: "Google Maps Flight Simulator",
+		filename: "index.html",
+		template: "./index.html"
+	})]
 };
 
 
