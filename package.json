@@ -11,15 +11,12 @@
 		"type": "git",
 		"url": "git+https://github.com/Ternt/Google-Maps-Flight-Simulator.git"
 	},
-	"bugs": {
-		"url": "https://github.com/Ternt/Google-Maps-Flight-Simulator/issues"
-	},
 	"workspaces": [
-		"fsm_backend",
-		"fsm_frontend"
+		"fsm-backend",
+		"fsm-frontend"
 	],
 	"scripts": {
-		"dev": "concurrently \"yarn workspace fsm_backend watch:server\" \"yarn workspace fsm_frontend watch:build\""
+		"dev": "concurrently \"yarn workspace fsm-backend watch:server\" \"yarn workspace fsm-frontend watch:build\""
 	},
 	"engines": {
 		"npm": "please-use-yarn",
