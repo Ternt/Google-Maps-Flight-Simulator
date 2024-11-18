@@ -10,7 +10,6 @@ let WebGLUtils = function() {
         return context;
     };
 
-
     let setupWebGL2 = (canvas) => {
         let context = canvas.getContext("webgl2");
         if (!context) {
