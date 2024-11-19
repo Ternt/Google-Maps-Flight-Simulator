@@ -1,5 +1,4 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = (env) => {
@@ -16,11 +15,6 @@ module.exports = (env) => {
 				filename: 'index.html',
 				template: PATHS.src + 'index.html'
 			}),
-			new CopyWebpackPlugin({
-				patterns: [
-					{ from: PATHS.src + 'assets', to: PATHS.dist + 'assets' },
-				]
-			})
 		],
 		output: {
 			path: PATHS.dist,
@@ -38,16 +32,6 @@ module.exports = (env) => {
 							presets: ['@babel/preset-env']
 						}
 					},
-				},
-				{
-					test: /\.glsl$/,
-					use: {
-						loader: 'webpack-glsl-loader'
-					},
-				},
-				{
-					test: /\.(obj|mtl)$/,
-					type: 'asset/resource',
 				},
 			],
 		},
