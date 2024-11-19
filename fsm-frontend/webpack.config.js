@@ -1,5 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HTMLReplaceWebpackPlugin = require('html-replace-webpack-plugin');
 const path = require('path');
+require('dotenv').config();
 
 module.exports = (env) => {
 	const PATHS = {
@@ -15,6 +17,12 @@ module.exports = (env) => {
 				filename: 'index.html',
 				template: PATHS.src + 'index.html'
 			}),
+			new HTMLReplaceWebpackPlugin([
+				{
+					pattern: '@@API_KEY',
+					replacement: process.env.GOOGLE_API_KEY,
+				},
+			]),
 		],
 		output: {
 			path: PATHS.dist,

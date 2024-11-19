@@ -1,11 +1,14 @@
 import express from 'express';
 import path from 'path';
+import cors from 'cors';
 
 const port = process.env.PORT || 8080;
 const url = process.env.URL || 'http://localhost';
 
 const app = express();
 const dist_path = path.join(import.meta.dirname, '../fsm-frontend/dist/');
+
+app.use(cors());
 
 app.use((req,res,next) => {
     console.log(`${req.method} ${req.url} HTTP/${req.httpVersion}`);
@@ -81,7 +84,7 @@ app.get('/assets/:name', (req, res, next) => {
 
 
 app.listen(port, () => {
-    console.log(`Server started at ${url}:${port}`)
+    console.log(`CORS-enabled web server started at ${url}:${port}`)
 });
 
 
