@@ -7,9 +7,6 @@ import {
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-import earthElevationImage from './assets/earth_elevation.jpg'
-import earthTexture from './assets/catstare.jpg'
-
 import { PlaneController } from './planeController'
 import plane_glbmodel from './assets/stylized_ww1_plane.glb'
 
