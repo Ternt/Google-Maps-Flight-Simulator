@@ -6,6 +6,9 @@ A flight simulator on the web using WebGL and Google's photorealistic map tiling
 ## Usage
 Before running yarn, make sure to put your api key in src/index.js.
 
-``yarn run dev``
+```
+yarn install
+yarn run dev
+```
 
 
