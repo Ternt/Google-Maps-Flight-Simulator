@@ -8,11 +8,17 @@
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+			overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<h1>
-    <%= htmlWebpackPlugin.options.title %>
-</h1>
-<canvas id="webgl-canvas" width="512" height="512"></canvas>
+	<div id="screen" oncontextmenu="return false;" style="position: absolute; height:100%; width:100%; left: 0px; top:0px;"></div>
 </body>
 </html>
