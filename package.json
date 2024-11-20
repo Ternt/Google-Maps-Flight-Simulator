@@ -16,7 +16,7 @@
 		"fsm-frontend"
 	],
 	"scripts": {
-		"dev": "concurrently \"yarn workspace fsm-backend watch:server\" \"yarn workspace fsm-frontend watch:build\""
+		"dev": "concurrently \"yarn workspace fsm-backend server\" \"yarn workspace fsm-frontend build\""
 	},
 	"engines": {
 		"npm": "please-use-yarn",

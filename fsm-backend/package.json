@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "watch:server": "nodemon -w index.js -w \"../fsm_frontend/dist\" -w \"../fsm_frontend/src/index.js\""
+    "server": "nodemon -w index.js -w \"../fsm_frontend/dist\" -w \"../fsm_frontend/src/index.js\""
   },
   "author": "",
   "license": "ISC",

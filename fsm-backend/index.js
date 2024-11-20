@@ -72,6 +72,14 @@ app.get('/assets/:name', (req, res, next) => {
     if (extension === 'obj') {
         res.set('Content-Type', 'text/plain');
     }
+    if (extension === 'png') {
+        res.set('Content-Type', 'image/png');
+    }
+    if (extension === 'glb') {
+        res.set('Content-Type', 'model/gltf-binary');
+    }
+
+
 
     res.sendFile(file, options, (err) => {
         if (err) {
