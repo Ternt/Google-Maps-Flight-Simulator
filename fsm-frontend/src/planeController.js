@@ -5,7 +5,7 @@ const rotation180 = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,
 
 // https://github.com/ebeaufay/ultraglobedemos/blob/main/demos/customController/src/planeController.js
 class PlaneController extends Controller {
-    constructor(camera, domElement, map, object3D, showUI = false) {
+    constructor(camera, domElement, map, object3D) {
         super(camera, domElement, map);
 
         this.forward = new THREE.Vector3();
@@ -46,9 +46,6 @@ class PlaneController extends Controller {
         this.targetCameraQuaternion = new THREE.Quaternion();
 
         this.object3D = object3D;
-        if (showUI) {
-            this.addUI(domElement);
-        }
         this.clock = new THREE.Clock();
 
 		this.controller = { };
@@ -172,9 +169,9 @@ class PlaneController extends Controller {
 
         this.object3D.quaternion.multiplyQuaternions(this.yaw, this.object3D.quaternion);
 
-        // this.forward.multiplyScalar(this.acceleration);
-        // this.speed.add(this.forward);
-        // this.object3D.position.add(this.speed);
+        this.forward.multiplyScalar(this.acceleration);
+        this.speed.add(this.forward);
+        this.object3D.position.add(this.speed);
 
         this.object3D.updateMatrix();
 
@@ -186,10 +183,6 @@ class PlaneController extends Controller {
         this.targetCameraQuaternion.multiplyQuaternions(this.object3D.quaternion, rotation180);
         this.camera.quaternion.slerp(this.targetCameraQuaternion, 0.035);
         this.camera.up.set(0,1,0).applyQuaternion(this.camera.quaternion).normalize();
-    }
-
-    getForward() {
-        return this.forward;
     }
 
     _dispose(){
